@@ -7,6 +7,11 @@ TagManager:
   - H2S04
   - Water
   - Pheno
+  - Acid
+  - Base
+  - Neutral
+  - ???
+  - Locked Chest
   layers:
   - Default
   - TransparentFX

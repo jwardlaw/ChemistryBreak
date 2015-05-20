@@ -34,15 +34,15 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		RaycastHit hit = new RaycastHit();
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		if(Physics.Raycast(ray, out hit, 1000)) {
-			if(hit.collider.tag == "Water")
+			if(hit.collider.tag == "Neutral" || hit.collider.tag == "Water")
 			{
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "H2S04")
+			else if(hit.collider.tag == "Acid" || hit.collider.tag == "H2S04")
 			{
 				StartCoroutine("DisplayTextAcid");
 			}
-			else if(hit.collider.tag == "Pheno")
+			else if(hit.collider.tag == "Base" || hit.collider.tag == "Pheno")
 			{
 				StartCoroutine("DisplayTextBase");
 			}
