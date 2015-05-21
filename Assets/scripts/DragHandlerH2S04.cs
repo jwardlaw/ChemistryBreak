@@ -3,10 +3,10 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
+public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject item;
 	//public static GameObject item2;
-
+	
 	public Button button1;
 	
 	Vector3 start_position;
@@ -18,8 +18,8 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		highlight = ui_text.GetComponent<Text> ();
 		button1.GetComponentInChildren<Text> ().text = gameObject.tag;
 	}
-
-
+	
+	
 	public void OnBeginDrag (PointerEventData eventData)
 	{
 		item = gameObject;
@@ -29,7 +29,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	{
 		transform.position = Input.mousePosition;
 	}
-
+	
 	public void OnEndDrag (PointerEventData eventData)
 	{
 		RaycastHit hit = new RaycastHit();
@@ -49,7 +49,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 			}
 			else if(hit.collider.tag == "Pheno")
 			{
-				StartCoroutine("DisplayTextPheno");
+				StartCoroutine ("DisplayTextPheno");
 			}
 			else if(hit.collider.tag == "Locked Chest")
 			{
@@ -63,42 +63,42 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		item = null;
 		transform.position = start_position;
 	}
-
+	
 	IEnumerator DisplayText()
 	{
-		highlight.text = "Nothing happened.";
+		highlight.text = "H2S04 mixes deep in the water.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
-
+	
 	IEnumerator DisplayTextAcid()
 	{
-		highlight.text = "The pH strip turned red.";
+		highlight.text = "There was no reaction.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
-
+	
 	IEnumerator DisplayTextBase()
 	{
-		highlight.text = "The pH strip turned blue.";
+		highlight.text = "Percipatate formed in the mixed solution.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
 
 	IEnumerator DisplayTextPheno()
 	{
-		highlight.text = "The pH strip turned slightly red.";
+		highlight.text = "Phenolphthalein turns orange";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
-
+	
 	IEnumerator DisplayTextChest()
 	{
-		highlight.text = "The pH strip crumbled in the lock.";
+		highlight.text = "The lock corroded off the chest.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
-
+	
 	IEnumerator DisplayTextEtc()
 	{
 		highlight.text = "These cannot be combined";
