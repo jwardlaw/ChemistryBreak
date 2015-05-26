@@ -55,7 +55,11 @@ public class DragHandlerWater : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			else if(hit.collider.tag == "Locked Chest")
 			{
 				StartCoroutine("DisplayTextChest");
-			}	
+			}
+			else if(hit.collider.tag == "Paper")
+			{
+				StartCoroutine("DisplayTextPaper");
+			}
 			else
 			{
 				StartCoroutine("DisplayTextEtc");
@@ -68,6 +72,13 @@ public class DragHandlerWater : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	IEnumerator DisplayText()
 	{
 		highlight.text = "Nothing happened.";
+		yield return new WaitForSeconds (10);
+		highlight.text = "";
+	}
+
+	IEnumerator DisplayTextPaper()
+	{
+		highlight.text = "Paper is soaked but nothing happens.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}

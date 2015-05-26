@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ChestCameraPan : MonoBehaviour {
+	public GameObject chest;
 	public Transform startMarker;
 	public Transform endMarker;
 	public float speed = 1.0F;
@@ -35,5 +36,6 @@ public class ChestCameraPan : MonoBehaviour {
 			elapsedTime += Time.deltaTime;
 			yield return new WaitForEndOfFrame();
 		}
+		chest.GetComponent<BoxCollider> ().enabled = false;
 	}
 }

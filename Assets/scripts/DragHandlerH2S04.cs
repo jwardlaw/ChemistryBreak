@@ -57,7 +57,11 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 				hit.collider.GetComponent<Animation>().Play ("ChestAnim");
 				StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().PanToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));
 				StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().RotToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));			
-			}	
+			}
+			else if(hit.collider.tag == "Paper")
+			{
+				StartCoroutine("DisplayTextPaper");
+			}
 			else
 			{
 				StartCoroutine("DisplayTextEtc");
@@ -70,6 +74,13 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	IEnumerator DisplayText()
 	{
 		highlight.text = "H2S04 mixes deep in the water.";
+		yield return new WaitForSeconds (10);
+		highlight.text = "";
+	}
+
+	IEnumerator DisplayTextPaper()
+	{
+		highlight.text = "A drip of acid creates a hole in the paper. Maybe you shouldn't use this.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}

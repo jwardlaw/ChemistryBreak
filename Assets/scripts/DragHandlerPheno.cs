@@ -5,6 +5,7 @@ using System.Collections;
 
 public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject item;
+	public GameObject code;
 	//public static GameObject item2;
 	
 	public Button button1;
@@ -54,7 +55,11 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			else if(hit.collider.tag == "Locked Chest")
 			{
 				StartCoroutine("DisplayTextChest");
-			}	
+			}
+			else if(hit.collider.tag == "Paper")
+			{
+				StartCoroutine("DisplayTextPaper");
+			}
 			else
 			{
 				StartCoroutine("DisplayTextEtc");
@@ -67,6 +72,14 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	IEnumerator DisplayText()
 	{
 		highlight.text = "Phenolphthalein remained colorless.";
+		yield return new WaitForSeconds (10);
+		highlight.text = "";
+	}
+
+	IEnumerator DisplayTextPaper()
+	{
+		code.SetActive (true);
+		highlight.text = "Phenolphthalein turns purple on the paper yielding a keycode";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
