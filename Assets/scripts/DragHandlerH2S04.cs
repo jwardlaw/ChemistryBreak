@@ -54,6 +54,9 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			else if(hit.collider.tag == "Locked Chest")
 			{
 				StartCoroutine("DisplayTextChest");
+				hit.collider.GetComponent<Animation>().Play ("ChestAnim");
+				StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().PanToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));
+				StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().RotToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));			
 			}	
 			else
 			{

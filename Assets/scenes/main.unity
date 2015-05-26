@@ -647,6 +647,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.03999996, y: .550000012, z: 1.41999996}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &653199918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653199913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e83fea3c5dd324a8cc363b29456f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMarker: {fileID: 2069106454}
+  endMarker: {fileID: 1996793824}
+  speed: 1
 --- !u!1 &774063298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1869,10 @@ Prefab:
       propertyPath: m_TagString
       value: Locked Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
   m_IsPrefabParent: 0
@@ -2322,6 +2340,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button1: {fileID: 1962189604}
   ui_text: {fileID: 50702208}
+--- !u!1 &1996793823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1996793824}
+  m_Layer: 0
+  m_Name: EndPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1996793824
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1996793823}
+  m_LocalRotation: {x: -1.15202326e-07, y: .707106709, z: -.707106829, w: -1.15202312e-07}
+  m_LocalPosition: {x: -2.18000007, y: 2.1170001, z: -1.63100004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
 --- !u!1001 &2048010387
 Prefab:
   m_ObjectHideFlags: 0
