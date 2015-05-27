@@ -5,6 +5,7 @@ using System.Collections;
 
 public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject item;
+	public GameObject chest;
 	public GameObject code;
 	//public static GameObject item2;
 	
@@ -59,6 +60,8 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			else if(hit.collider.tag == "Paper")
 			{
 				StartCoroutine("DisplayTextPaper");
+				StartCoroutine(chest.GetComponent<ChestCameraPan>().PanToPosition (chest.GetComponent<ChestCameraPan>().endMarker, chest.GetComponent<ChestCameraPan>().retMarker, Time.time));
+				StartCoroutine(chest.GetComponent<ChestCameraPan>().RotToPosition (chest.GetComponent<ChestCameraPan>().endMarker, chest.GetComponent<ChestCameraPan>().retMarker, Time.time));			
 			}
 			else
 			{
@@ -79,7 +82,8 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	IEnumerator DisplayTextPaper()
 	{
 		code.SetActive (true);
-		highlight.text = "Phenolphthalein turns purple on the paper yielding a keycode";
+		highlight.text = "Phenolphthalein turns purple on the paper yielding a keycode: 1111";
+		code.SetActive (false);
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}

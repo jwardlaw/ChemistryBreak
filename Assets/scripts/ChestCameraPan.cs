@@ -3,8 +3,10 @@ using System.Collections;
 
 public class ChestCameraPan : MonoBehaviour {
 	public GameObject chest;
+	public GameObject inputfield;
 	public Transform startMarker;
 	public Transform endMarker;
+	public Transform retMarker;
 	public float speed = 1.0F;
 	private float startTime;
 	private float journeyLength;
@@ -30,12 +32,13 @@ public class ChestCameraPan : MonoBehaviour {
 	public IEnumerator RotToPosition(Transform start, Transform end, float time)
 	{
 		float elapsedTime = 0;
+		inputfield.SetActive (false);
+		chest.GetComponent<BoxCollider> ().enabled = false;
 		while (elapsedTime < time)
 		{
 			Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, end.rotation, (elapsedTime / time));
 			elapsedTime += Time.deltaTime;
 			yield return new WaitForEndOfFrame();
 		}
-		chest.GetComponent<BoxCollider> ().enabled = false;
 	}
 }
