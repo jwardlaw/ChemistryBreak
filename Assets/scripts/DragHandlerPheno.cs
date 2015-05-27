@@ -83,6 +83,7 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	{
 		code.SetActive (true);
 		highlight.text = "Phenolphthalein turns purple on the paper yielding a keycode: 1111";
+		yield return new WaitForSeconds (2);
 		code.SetActive (false);
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
