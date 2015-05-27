@@ -1,0 +1,36 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: Intel(R) HD Graphics (ID=0x46)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Binh\ChemistryBreak\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Binh\ChemistryBreak\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Binh\ChemistryBreak\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Binh\ChemistryBreak\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Binh\ChemistryBreak\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Binh\ChemistryBreak\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.136 seconds
+desktop: 1366x768 50Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Binh\ChemistryBreak\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Binh\ChemistryBreak\test_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 87c -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.617712 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 469.
+Total: 0.512408 ms (FindLiveObjects: 0.042344 ms CreateObjectMapping: 0.038494 ms MarkObjects: 0.412322 ms  DeleteObjects: 0.017964 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.522730 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 469.
+Total: 0.479901 ms (FindLiveObjects: 0.036356 ms CreateObjectMapping: 0.032506 ms MarkObjects: 0.397779 ms  DeleteObjects: 0.012403 ms)
+
