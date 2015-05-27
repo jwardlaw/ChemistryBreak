@@ -19,8 +19,8 @@ public class ChestCameraPan : MonoBehaviour {
 
 	public IEnumerator PanToPosition(Transform start, Transform end, float time)
 	{	
-		yield return new WaitForSeconds (2);
 		float elapsedTime = 0;
+		
 		while (elapsedTime < time)
 		{
 			Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, end.position, (elapsedTime / time));
@@ -31,7 +31,6 @@ public class ChestCameraPan : MonoBehaviour {
 
 	public IEnumerator RotToPosition(Transform start, Transform end, float time)
 	{
-		yield return new WaitForSeconds (2);
 		float elapsedTime = 0;
 		inputfield.SetActive (false);
 		chest.GetComponent<BoxCollider> ().enabled = false;
