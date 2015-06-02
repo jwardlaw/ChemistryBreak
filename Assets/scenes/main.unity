@@ -1979,7 +1979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 147148, guid: 818fe160fe936994fb812df43971c544, type: 2}
       propertyPath: m_TagString
-      value: H2S04
+      value: Acid
       objectReference: {fileID: 0}
     - target: {fileID: 147148, guid: 818fe160fe936994fb812df43971c544, type: 2}
       propertyPath: m_Name
@@ -2028,15 +2028,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400014, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.18000007
+      value: -2.1789999
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.421
+      value: 1.27100003
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.74000001
+      value: -1.73699999
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2142,7 +2142,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669472281}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: -.209999993, y: .109999999, z: 1.54900002}
+  m_LocalPosition: {x: -.209999993, y: .109999999, z: 1.37899995}
   m_LocalScale: {x: .0700000003, y: .0199999996, z: .0500000007}
   m_Children:
   - {fileID: 1860488438}
@@ -2158,7 +2158,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ba64e128eeb5349fc990a121f3b3a24c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2476,7 +2476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter Keycod
+  m_Text: Enter Keycode
 --- !u!222 &1758987642
 CanvasRenderer:
   m_ObjectHideFlags: 0
