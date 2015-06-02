@@ -8,6 +8,9 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	//public static GameObject item2;
 
 	public Button button1;
+	public GameObject button2;
+	public GameObject button3;
+	public GameObject button4;
 	
 	Vector3 start_position;
 	public GameObject ui_text;
@@ -15,6 +18,9 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 	
 	void Start()
 	{
+		button2.SetActive (false);
+		button3.SetActive (false);
+		button4.SetActive (false);
 		highlight = ui_text.GetComponent<Text> ();
 		button1.GetComponentInChildren<Text> ().text = gameObject.tag;
 	}
@@ -37,10 +43,14 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		if(Physics.Raycast(ray, out hit, 1000)) {
 			if(hit.collider.tag == "Neutral" || hit.collider.tag == "Water")
 			{
+				if(hit.collider.tag == "Neutral")	
+					button2.SetActive(true);
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "H2SO4" || hit.collider.tag == "HCl")
+			else if(hit.collider.tag == "H2S04" || hit.collider.tag == "HCl")
 			{
+				if(hit.collider.tag == "H2S04")
+					button3.SetActive(true);
 				StartCoroutine("DisplayTextAcid");
 			}
 			else if(hit.collider.tag == "Base")
@@ -49,6 +59,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 			}
 			else if(hit.collider.tag == "Pheno")
 			{
+				button4.SetActive(true);
 				StartCoroutine("DisplayTextPheno");
 			}
 			else if(hit.collider.tag == "Locked Chest")
@@ -87,7 +98,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 	IEnumerator DisplayTextPheno()
 	{
-		highlight.text = "The pH strip turned slightly red.";
+		highlight.text = "The pH strip turned slightly orange.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}
