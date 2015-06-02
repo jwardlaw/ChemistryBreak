@@ -39,7 +39,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 			{
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "Acid" || hit.collider.tag == "H2S04")
+			else if(hit.collider.tag == "H2SO4" || hit.collider.tag == "HCl")
 			{
 				StartCoroutine("DisplayTextAcid");
 			}
@@ -73,7 +73,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 	IEnumerator DisplayTextAcid()
 	{
-		highlight.text = "The pH strip turned red.";
+		highlight.text = "The pH strip turned orange.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}

@@ -14,6 +14,7 @@ TagManager:
   - Locked Chest
   - pH Strips
   - Paper
+  - HCL
   layers:
   - Default
   - TransparentFX
