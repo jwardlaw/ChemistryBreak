@@ -43,11 +43,10 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		if(Physics.Raycast(ray, out hit, 1000)) {
 			if(hit.collider.tag == "Neutral" || hit.collider.tag == "Water")
 			{
-				if(hit.collider.tag == "Neutral")	
-					button2.SetActive(true);
+				button2.SetActive(true);
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "H2S04" || hit.collider.tag == "HCl")
+			else if(hit.collider.tag == "H2S04" || hit.collider.tag == "HCL")
 			{
 				if(hit.collider.tag == "H2S04")
 					button3.SetActive(true);
@@ -77,7 +76,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 	IEnumerator DisplayText()
 	{
-		highlight.text = "Nothing happened.";
+		highlight.text = "The pH strip did not change colors.";
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}

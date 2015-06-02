@@ -672,7 +672,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413634, guid: 52b4551a686babf46a4398d2f694d410, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.87
+      value: 1.96300006
       objectReference: {fileID: 0}
     - target: {fileID: 413634, guid: 52b4551a686babf46a4398d2f694d410, type: 2}
       propertyPath: m_LocalRotation.x
@@ -987,8 +987,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d73cf31a5e8f80a46af3e397a18d565e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1031,7 +1031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 486678, guid: 8e55a5caff9df27488cbbfc217f83872, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.88
+      value: 1.97099996
       objectReference: {fileID: 0}
     - target: {fileID: 486678, guid: 8e55a5caff9df27488cbbfc217f83872, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1055,7 +1055,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 105772, guid: 8e55a5caff9df27488cbbfc217f83872, type: 2}
       propertyPath: m_Name
-      value: H2S04
+      value: HCL
       objectReference: {fileID: 0}
     - target: {fileID: 486678, guid: 8e55a5caff9df27488cbbfc217f83872, type: 2}
       propertyPath: m_LocalScale.x
@@ -1747,7 +1747,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a431bc2456fabc24aafffe7b8ec3dc72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.84000003
+      value: 1.94599998
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a431bc2456fabc24aafffe7b8ec3dc72, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1809,8 +1809,8 @@ GameObject:
   - 114: {fileID: 1465706612}
   - 114: {fileID: 1465706615}
   m_Layer: 5
-  m_Name: H2S04_Button
-  m_TagString: HCL
+  m_Name: HCL_Button
+  m_TagString: H2S04
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1887,8 +1887,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f25cd3f84eb0ba348838f7d09eb27867, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2259,8 +2259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 464625bf7cced8040ad40086c80cadaa, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
