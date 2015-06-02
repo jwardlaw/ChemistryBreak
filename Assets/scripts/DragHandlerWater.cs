@@ -40,7 +40,7 @@ public class DragHandlerWater : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			{
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "Acid" || hit.collider.tag == "H2S04")
+			else if(hit.collider.tag == "Acid" || hit.collider.tag == "H2S04" || hit.collider.tag == "HCL")
 			{
 				StartCoroutine("DisplayTextAcid");
 			}
