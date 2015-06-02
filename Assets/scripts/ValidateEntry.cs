@@ -19,7 +19,7 @@ public class ValidateEntry : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			if(field.text == "1111") {
 				msg.text = "Level 1 Completed";
-				Application.LoadLevel("level2");
+				Application.LoadLevel("Game Menu");
 			}
 
 		}
