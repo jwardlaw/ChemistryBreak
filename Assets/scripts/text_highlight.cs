@@ -38,8 +38,13 @@ public class text_highlight : MonoBehaviour {
 		RaycastHit hit = new RaycastHit();
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		if (Physics.Raycast (ray, out hit, 1000)) {
+<<<<<<< HEAD
+			if (hit.collider.tag == "H2S04" || hit.collider.tag == "Base" || hit.collider.tag == "Neutral")
+				highlight.text = "These are 3 bottles of H20, H2S04 and NaOH, but the name tags are missing.";
+=======
 			if (hit.collider.tag == "Acid" || hit.collider.tag == "Base" || hit.collider.tag == "Neutral")
 				highlight.text = "These are 3 bottles of H20, H2So4 and NaOH, but the name tags are missing.";
+>>>>>>> origin/master
 			else if (hit.collider.tag == "Pheno")
 				highlight.text = "Phenolphthalein";
 			else if (hit.collider.tag == "Locked Chest")

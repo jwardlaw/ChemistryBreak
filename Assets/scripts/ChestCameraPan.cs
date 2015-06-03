@@ -10,6 +10,7 @@ public class ChestCameraPan : MonoBehaviour {
 	public float speed = 1.0F;
 	private float startTime;
 	private float journeyLength;
+	public float elapsedTime = 0;
 
 	void Start() {
 		startTime = Time.time;
@@ -19,7 +20,7 @@ public class ChestCameraPan : MonoBehaviour {
 
 	public IEnumerator PanToPosition(Transform start, Transform end, float time)
 	{	
-		float elapsedTime = 0;
+		elapsedTime = 0;
 		
 		while (elapsedTime < time)
 		{
@@ -31,7 +32,7 @@ public class ChestCameraPan : MonoBehaviour {
 
 	public IEnumerator RotToPosition(Transform start, Transform end, float time)
 	{
-		float elapsedTime = 0;
+		elapsedTime = 0;
 		inputfield.SetActive (false);
 		chest.GetComponent<BoxCollider> ().enabled = false;
 		while (elapsedTime < time)
