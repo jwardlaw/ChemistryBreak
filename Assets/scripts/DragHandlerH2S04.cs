@@ -8,6 +8,7 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	//public static GameObject item2;
 	
 	public Button button1;
+	public Button button2;
 	
 	Vector3 start_position;
 	public GameObject ui_text;
@@ -39,7 +40,7 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			{
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "Acid" || hit.collider.tag == "H2S04")
+			else if(hit.collider.tag == "Acid" || hit.collider.tag == "H2S04" || hit.collider.tag == "HCL")
 			{
 				StartCoroutine("DisplayTextAcid");
 			}
@@ -53,10 +54,16 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			}
 			else if(hit.collider.tag == "Locked Chest")
 			{
-				StartCoroutine("DisplayTextChest");
-				hit.collider.GetComponent<Animation>().Play ("ChestAnim");
-				StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().PanToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));
-				StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().RotToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));			
+				if(button2.isActiveAndEnabled == false)
+				{
+					StartCoroutine("DisplayTextChest");
+				}
+				else {
+					StartCoroutine("DisplayTextChest");
+					hit.collider.GetComponent<Animation>().Play ("ChestAnim");
+					StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().PanToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));
+					StartCoroutine(hit.collider.GetComponent<ChestCameraPan>().RotToPosition (hit.collider.GetComponent<ChestCameraPan>().startMarker, hit.collider.GetComponent<ChestCameraPan>().endMarker, Time.time));			
+				}
 			}
 			else if(hit.collider.tag == "Paper")
 			{
@@ -108,9 +115,15 @@ public class DragHandlerH2S04 : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	
 	IEnumerator DisplayTextChest()
 	{
-		highlight.text = "The lock corroded off the chest.";
-		yield return new WaitForSeconds (10);
-		highlight.text = "";
+		if (button2.isActiveAndEnabled == false) {
+			highlight.text = "Some other tools might be necessary before you proceed.";
+			yield return new WaitForSeconds (10);
+			highlight.text = "";
+		} else {
+			highlight.text = "The lock corroded off the chest.";
+			yield return new WaitForSeconds (10);
+			highlight.text = "";
+		}
 	}
 	
 	IEnumerator DisplayTextEtc()
