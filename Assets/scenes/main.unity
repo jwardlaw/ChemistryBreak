@@ -762,6 +762,7 @@ MonoBehaviour:
   endMarker: {fileID: 1996793824}
   retMarker: {fileID: 178246158}
   speed: 2
+  elapsedTime: 0
 --- !u!1 &774063298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1124,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.29999995
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 066738378d77cef4085c5f47051453f1, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 066738378d77cef4085c5f47051453f1, type: 3}
   m_IsPrefabParent: 0
@@ -1281,6 +1286,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.17999995, y: 2.41000009, z: 1}
   m_Center: {x: .569999993, y: 1.20000005, z: -.310000002}
+--- !u!114 &1061710568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061710563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdd55e8bc9070341948f53a25ebe432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui_text: {fileID: 2127084022}
 --- !u!1 &1163597103
 GameObject:
   m_ObjectHideFlags: 0

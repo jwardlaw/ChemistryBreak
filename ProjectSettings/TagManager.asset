@@ -15,6 +15,7 @@ TagManager:
   - pH Strips
   - Paper
   - HCL
+  - Door
   layers:
   - Default
   - TransparentFX
