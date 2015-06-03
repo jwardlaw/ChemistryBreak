@@ -2080,7 +2080,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
@@ -2128,6 +2128,7 @@ GameObject:
   - 64: {fileID: 1669472284}
   - 23: {fileID: 1669472283}
   - 65: {fileID: 1669472286}
+  - 114: {fileID: 1669472287}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Paper
@@ -2203,6 +2204,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11, y: 1.85000002, z: 10}
   m_Center: {x: 3.81469727e-06, y: 0, z: 3.81469727e-06}
+--- !u!114 &1669472287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669472281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b5992fbcb27414cbe039a4882fb539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1704624278
 GameObject:
   m_ObjectHideFlags: 0
