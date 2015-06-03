@@ -6,7 +6,7 @@ using System.Collections;
 public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject item;
 	public GameObject chest;
-	public GameObject code;
+	public GameObject paper;
 	//public static GameObject item2;
 	
 	public Button button1;
@@ -14,6 +14,7 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 	Vector3 start_position;
 	public GameObject ui_text;
 	Text highlight;
+	public Texture new_paper;
 	
 	void Start()
 	{
@@ -60,8 +61,6 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 			else if(hit.collider.tag == "Paper")
 			{
 				StartCoroutine("DisplayTextPaper");
-				StartCoroutine(chest.GetComponent<ChestCameraPan>().PanToPosition (chest.GetComponent<ChestCameraPan>().endMarker, chest.GetComponent<ChestCameraPan>().retMarker, Time.time));
-				StartCoroutine(chest.GetComponent<ChestCameraPan>().RotToPosition (chest.GetComponent<ChestCameraPan>().endMarker, chest.GetComponent<ChestCameraPan>().retMarker, Time.time));			
 			}
 			else
 			{
@@ -81,9 +80,11 @@ public class DragHandlerPheno : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 
 	IEnumerator DisplayTextPaper()
 	{
-		code.SetActive (true);
 		highlight.text = "Phenolphthalein turns purple on the paper yielding a keycode: 1111";
-		code.SetActive (false);
+		paper.GetComponent<Renderer>().material.SetTexture("_MainTex", new_paper);
+		yield return new WaitForSeconds (5);
+		StartCoroutine(chest.GetComponent<ChestCameraPan>().PanToPosition (chest.GetComponent<ChestCameraPan>().endMarker, chest.GetComponent<ChestCameraPan>().retMarker, Time.time));
+		StartCoroutine(chest.GetComponent<ChestCameraPan>().RotToPosition (chest.GetComponent<ChestCameraPan>().endMarker, chest.GetComponent<ChestCameraPan>().retMarker, Time.time));			
 		yield return new WaitForSeconds (10);
 		highlight.text = "";
 	}

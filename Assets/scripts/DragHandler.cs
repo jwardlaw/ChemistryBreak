@@ -25,7 +25,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		button1.GetComponentInChildren<Text> ().text = gameObject.tag;
 	}
 
-
 	public void OnBeginDrag (PointerEventData eventData)
 	{
 		item = gameObject;
@@ -46,7 +45,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 				button2.SetActive(true);
 				StartCoroutine("DisplayText");
 			}
-			else if(hit.collider.tag == "H2S04" || hit.collider.tag == "HCL")
+			else if(hit.collider.tag == "H2S04" || hit.collider.tag == "HCL" || hit.collider.tag == "Acid")
 			{
 				if(hit.collider.tag == "H2S04")
 					button3.SetActive(true);
