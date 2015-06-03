@@ -25,7 +25,9 @@ public class text_highlight : MonoBehaviour {
 			else if (hit.collider.tag == "Pheno")
 				highlight.text = "Phenolphthalein";
 			else if (hit.collider.tag == "Locked Chest")
-				highlight.text = "A Locked Chest, but the lock seems quite rusty. Maybe some highly corrosive strong acid would be able to destory it.";
+				highlight.text = "A Locked Chest, but the lock seems quite rusty. Maybe some highly corrosive strong acid would be able to destroy it.";
+			else if (hit.collider.tag == "Door")
+				highlight.text = "A Door locked by a keypad. Click to use the keypad";
 			else
 				highlight.text = hit.collider.tag;
 		}
