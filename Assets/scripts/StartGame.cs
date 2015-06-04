@@ -7,7 +7,7 @@ public class StartGame: MonoBehaviour {
 		//start the game if the start game key is pressed
 		if (Input.GetKeyDown ("space"))
 		{
-			Application.LoadLevel("main");
+			Application.LoadLevel("Tutorial");
 		}
 	}
 }
